@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CAPTCHA Verification</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="captcha-box">
+    <div class="instruction" style="display:none;"></div>
+    <label><input type="checkbox" id="robotCheck"> I'm not a robot</label>
+    <div id="loading"><div class="spinner"></div>Generating image...</div>
+    <div id="grid"></div>
+    <button class="btn" id="submitBtn" style="display:none;">Verify</button>
+    <button class="btn" id="retryBtn" style="display:none;">Try Again</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
